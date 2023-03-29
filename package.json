@@ -1,0 +1,22 @@
+{
+  "name": "tsdemo",
+  "version": "1.0.0",
+  "description": "Proyecto de ejemplo para el desarrollo con TS",
+  "main": "index.js",
+  "scripts": {
+    "tsnode": "cd src && ts-node index.ts",
+    "start": "nodemon"
+  },
+  "keywords": [
+    "typescript",
+    "ts"
+  ],
+  "author": "@quinojuan",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/node": "^18.15.11",
+    "nodemon": "^2.0.22",
+    "ts-node": "^10.9.1",
+    "typescript": "^5.0.2"
+  }
+}
