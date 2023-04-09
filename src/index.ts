@@ -79,12 +79,14 @@ console.log(`Tarea: ${tarea1.nombre}`)
 // Types de TypeScript
 type Producto = {
     precio: number,
-    nombre: string
+    nombre: string,
+    anio: number
 }
 
 let coche: Producto = {
     nombre: "Audi",
-    precio: 45000
+    precio: 45000,
+    anio: 2011
 }
 
-console.log(`Coche: ${coche.nombre}`)
+console.log(coche.anio > 2010 ? `Coche: ${coche.nombre} es nuevo` : `Coche: ${coche.nombre} es viejo`)
