@@ -1,3 +1,5 @@
+import { Console, log } from "console";
+
 console.log("Hola Juan")
 
 // Declaracion de variables:
@@ -34,3 +36,55 @@ let listaTareas: string[] = ["Tarea 1", "Tarea 2"];
 
 // Lista de cadenas de texto:
 let valores:(string | number | boolean)[] = [false, "hola", 56]
+
+// Enumerados
+
+enum Estados {
+    "Completado" = "C",
+    "Incompleto" = "I",
+    "Pendiente" = "P"
+}
+
+enum PuestoCarrera {
+    "Primero" = 1,
+    "Segundo",
+    "Tercero"
+}
+
+let estadoTarea: Estados = Estados.Incompleto
+let puestoMaraton: PuestoCarrera = PuestoCarrera.Primero;
+
+console.log(estadoTarea)
+console.log(puestoMaraton)
+
+
+// Interfaces
+
+interface Tarea {
+    nombre: string,
+    estado: Estados,
+    urgencia: number
+}
+
+// podemos crear variables que sigan la interface Tarea
+
+let tarea1: Tarea = {
+    nombre: "Tarea 1",
+    estado: Estados.Pendiente,
+    urgencia: 10
+}
+
+console.log(`Tarea: ${tarea1.nombre}`)
+
+// Types de TypeScript
+type Producto = {
+    precio: number,
+    nombre: string
+}
+
+let coche: Producto = {
+    nombre: "Audi",
+    precio: 45000
+}
+
+console.log(`Coche: ${coche.nombre}`)
