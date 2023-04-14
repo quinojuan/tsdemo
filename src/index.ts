@@ -146,11 +146,44 @@ function ejemploVariosTipos(a: string | number) {
   }
 }
 
+ejemploVariosTipos("juan");
 
-ejemploVariosTipos("juan")
-
-function ejemploReturn(nombre: string, apellidos: string):string | number { // le puedo decir que devuelva o un string o un number
-  return 3
+function ejemploReturn(nombre: string, apellidos: string): string | number {
+  // le puedo decir que devuelva o un string o un number
+  return 3;
 }
 
-console.log(ejemploReturn("juan", "quino"))
+console.log(ejemploReturn("juan", "quino"));
+
+/**
+ * @param nombres es una lista de nobmres de string
+ */
+
+function ejemploMultipleParams(...nombres: string[]): void {
+  // con este void estoy diciendo que no voy a devolver nada
+  nombres.forEach((nombre) => console.log(nombre));
+}
+
+ejemploMultipleParams("Juan", "albo", "dani");
+
+// ARROW Functions
+
+type Empleado = {
+  nombre: string;
+  apellidos: string;
+  edad: number;
+};
+
+let empleado = {
+  nombre: "Juan",
+  apellidos: "Quino",
+  edad: 39,
+};
+
+const mostrarEmpleado = (empleado: Empleado): string =>
+  `${empleado.nombre} tiene ${empleado.edad} años`;
+
+  // llamamos a la funcion
+  mostrarEmpleado(empleado)
+  
+  
