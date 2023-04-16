@@ -186,4 +186,49 @@ const mostrarEmpleado = (empleado: Empleado): string =>
   // llamamos a la funcion
   mostrarEmpleado(empleado)
   
-  
+
+  // este ejemplo no lo entendí, repasarlo.
+
+  // const obtenerSalario = (empleado: Empleado, cobrar: () => "Cobrar") {
+  //   if(empleado.edad > 70) {
+  //     return
+  //   } else {
+  //     cobrar(); // callback a ejecutar
+  //   }
+  // }
+
+  // Async Functions
+
+  async function ejemploAsync(): Promise<string>{
+
+    // Await
+    await console.log("Tarea a completar antes de seguir con la secuencia de instrucciones")
+    console.log("Tarea completada")
+    return "Completado"
+  }
+
+  // Generators
+
+  function* ejemploGenerator() {
+    // yield --> para emitir valores
+
+    let index = 0
+
+    while(index < 5){
+      // Emitimos un valor incrementado
+      yield index++
+    }
+  }
+
+  // Guardamos la funcion generadora en una variable
+
+  let generadora = ejemploGenerator()
+
+  // Accedemos a los valores emitidos
+
+  console.log("---------------->",generadora.next().value)
+  console.log("---------------->",generadora.next().value)
+  console.log("---------------->",generadora.next().value)
+  console.log("---------------->",generadora.next().value)
+  console.log("---------------->",generadora.next().value)
+  console.log("---------------->",generadora.next().value)
